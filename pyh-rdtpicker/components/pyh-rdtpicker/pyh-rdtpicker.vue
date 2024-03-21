@@ -12,17 +12,15 @@
 					<view :class="['inputView',{'inputEmpty':!endDate}]" :style="{color:themeColor,'border-color':themeColor,opacity:dateType=='endDate'?1:.5}" @tap="changeDateType('endDate')">{{endDate||'结束时间'}}</view>
 				</view>
 				<picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue" @change="pickerChangeMul">
-					<block>
-						<picker-view-column>
-							<view class="picker-item" v-for="(item,index) in yearArr" :key="index">{{item}}</view>
-						</picker-view-column>
-						<picker-view-column v-if="fields!='year'">
-							<view class="picker-item" v-for="(item,index) in monthArr" :key="index">{{item}}</view>
-						</picker-view-column>
-						<picker-view-column v-if="fields=='day'">
-							<view class="picker-item" v-for="(item,index) in dayArr" :key="index">{{item}}</view>
-						</picker-view-column>
-					</block>
+					<picker-view-column>
+						<view class="picker-item" v-for="(item,index) in yearArr" :key="index">{{item}}</view>
+					</picker-view-column>
+					<picker-view-column v-if="fields!='year'">
+						<view class="picker-item" v-for="(item,index) in monthArr" :key="index">{{item}}</view>
+					</picker-view-column>
+					<picker-view-column v-if="fields=='day'">
+						<view class="picker-item" v-for="(item,index) in dayArr" :key="index">{{item}}</view>
+					</picker-view-column>
 				</picker-view>
 			</view>
 		</view>
@@ -374,8 +372,9 @@
 		align-items: center;
 	}
 	.rangeBox .inputView{
-		width: 180upx;
-		padding: 4px 0;
+		white-space: nowrap;
+		min-width: 196upx;
+		padding: 8rpx;
 		margin: 0 10px;
 		text-align: center;
 		align-items: center;

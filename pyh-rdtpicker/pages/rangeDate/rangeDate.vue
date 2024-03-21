@@ -35,8 +35,9 @@
 		onLoad() {
 			//模拟修改start和end
 			setTimeout(()=>{
-				this.start = "2000-01-01";
-				this.end = "2022-01-01"
+				// this.start = "2000-01-01";
+				this.start = this.nowDate;
+				this.end = "2099-01-01"
 			},2000)
 		},
 		methods: {
@@ -48,7 +49,7 @@
 			},
 			bindChange(data){
 				console.log(data)
-				this.chooseDate=data[0]+"至"+data[1]
+				this.chooseDate=data[0]+" 至 "+data[1]
 			},
 			bindCancel(e){
 				console.log(e)

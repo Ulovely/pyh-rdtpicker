@@ -1,5 +1,5 @@
 {
-    "name" : "pdtPicker",
+    "name" : "pyh-rdtpicker",
     "appid" : "",
     "description" : "",
     "versionName" : "1.0.0",
@@ -60,5 +60,6 @@
             "urlCheck" : false
         },
         "usingComponents" : true
-    }
+    },
+    "vueVersion" : "3"
 }
